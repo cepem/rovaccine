@@ -13,7 +13,7 @@ Simple Node.js cron that checks the Official Romanian Covid Vaccine platform for
 The script will make a request every 30 seconds and it'll notify you once it finds an availble slot
 
 #### How to pick the vaccine ?
-In app.js on line 20 you have a constant named VACCIN_TYPE. Depending on your vaccine prefference set it to one of the followings value:
+In app.js on line 20 you have a constant named VACCINE_TYPE. Depending on your vaccine prefference set it to one of the followings value:
 - 1 for  Pfizer-BioNTech
 - 2 for  Moderna
 - 3 for AstraZeneca*
