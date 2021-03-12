@@ -13,11 +13,12 @@ const PROFILE_DATA = {
   recipientID: "",
 };
 
-// Available types are the following:
+// Available types are the following
 // 1: Pfizer-BioNTech
 // 2: Moderna
 // 3: AstraZeneca
-const VACCINE_TYPE = 3;
+// Pick only the ones you wanna be notified about
+const VACCINE_TYPES = [1, 2];
 
 const getVaccineSlotsData = () => {
   return new Promise((resolve, reject) => {
@@ -50,7 +51,8 @@ const getVaccineSlotsData = () => {
 
 const parseVaccineResponse = (vaccineResponse) => {
   const availableLocations = vaccineResponse.filter(
-    (item, index) => item.availableSlots > 0 && item.boosterID === VACCINE_TYPE
+    (item, index) =>
+      item.availableSlots > 0 && VACCINE_TYPES.includes(item.boosterID)
   );
 
   if (availableLocations.length > 0) {
