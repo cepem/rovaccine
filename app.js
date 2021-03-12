@@ -3,8 +3,9 @@ const fetch = require("node-fetch");
 const notifier = require("node-notifier");
 
 const PROFILE_DATA = {
-  cookie: "",
-  countyID: "",
+  cookie:
+    "",
+  countyID: 35,
   localityID: "",
   identificationCode: "",
   masterPersonnelCategoryID: -4,
@@ -12,8 +13,13 @@ const PROFILE_DATA = {
   recipientID: "",
 };
 
+// Available types are the following:
+// 1: Pfizer-BioNTech
+// 2: Moderna
+// 3: AstraZeneca
+const VACCINE_TYPE = 3;
+
 const getVaccineSlotsData = () => {
-  
   return new Promise((resolve, reject) => {
     fetch(
       "https://programare.vaccinare-covid.gov.ro/scheduling/api/centres?page=0&size=10&sort=,",
@@ -44,7 +50,7 @@ const getVaccineSlotsData = () => {
 
 const parseVaccineResponse = (vaccineResponse) => {
   const availableLocations = vaccineResponse.filter(
-    (item, index) => item.availableSlots > 0
+    (item, index) => item.availableSlots > 0 && item.boosterID === VACCINE_TYPE
   );
 
   if (availableLocations.length > 0) {
