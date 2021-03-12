@@ -1,24 +1,7 @@
 const cron = require("node-cron");
 const fetch = require("node-fetch");
 const notifier = require("node-notifier");
-
-const PROFILE_DATA = {
-  cookie:
-    "",
-  countyID: 35,
-  localityID: "",
-  identificationCode: "",
-  masterPersonnelCategoryID: -4,
-  personnelCategoryID: 32,
-  recipientID: "",
-};
-
-// Available types are the following
-// 1: Pfizer-BioNTech
-// 2: Moderna
-// 3: AstraZeneca
-// Pick only the ones you wanna be notified about
-const VACCINE_TYPES = [1, 2];
+const { PROFILE_DATA, VACCINE_TYPES } = require("./config");
 
 const getVaccineSlotsData = () => {
   return new Promise((resolve, reject) => {

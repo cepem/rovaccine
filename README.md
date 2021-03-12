@@ -12,14 +12,14 @@ I developed this bot for my personal usage and I will not be responding to issue
 
 1. Clone this repo
 2. `npm install`
-3. Change the PROFILE_DATA object with your data.
+3. Change the PROFILE_DATA object in config.js with your data.
 4. `node app.js`
 
 The script will make a request every 30 seconds and it'll notify you once it finds an availble slot
 
 #### How to pick the vaccine ?
 
-In app.js on line 20 you have an array named VACCINE_TYPES. Depending on your vaccine prefference insert the following values into it:
+In config.js you have an array named VACCINE_TYPES. Depending on your vaccine prefference insert the following values into it:
 
 - 1 for Pfizer-BioNTech
 - 2 for Moderna
