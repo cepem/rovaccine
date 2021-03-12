@@ -30,3 +30,7 @@ In config.js you have an array named VACCINE_TYPES. Depending on your vaccine pr
 **Where do I get the data for the PROFILE_DATA object ?**
 
 This script is already extremly easy to setup and use therefore I'll let you figure that one on your own.
+
+**The initial request returns an HTML instead of a JSON and I get a weird error**
+
+Probably your config data is wrong. Make sure your cookie is valid.
