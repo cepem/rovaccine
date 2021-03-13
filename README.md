@@ -1,3 +1,4 @@
+
 # rovaccine
 
 [![](https://i.imgur.com/CpIMJBM.png)](https://i.imgur.com/CpIMJBM.pnghttp://)
@@ -25,6 +26,8 @@ In config.js you have an array named VACCINE_TYPES. Depending on your vaccine pr
 - 2 for Moderna
 - 3 for AstraZeneca\*
 
+
+
 ## FAQ
 
 **Where do I get the data for the PROFILE_DATA object ?**
@@ -34,3 +37,9 @@ This script is already extremly easy to setup and use therefore I'll let you fig
 **The initial request returns an HTML instead of a JSON and I get a weird error**
 
 Probably your config data is wrong. Make sure your cookie is valid.
+
+**How can we contribute ?**
+1. Fork this repo
+2. Create a new branch on your fork
+3. Write your changes
+4. Follow [this guide](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) to open a pull request
