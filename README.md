@@ -5,6 +5,10 @@
 
 Simple Node.js cron that checks the Official Romanian Covid Vaccine platform for available slots in your area.
 
+# UPDATE: FUN IS OVER!
+The romanian government introduced a waiting list feature which makes this script quite uselesss. There's no point in using this anymore.
+
+
 Disclaimer:
 
 I developed this bot for my personal usage and I will not be responding to issues or code-style comments. If you have any improvements, feel free to open a pull request and I'll be happy to accept your changes.
